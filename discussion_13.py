@@ -34,7 +34,8 @@ def plot_issue_trend_by_language(issues, languages=['Python', 'C', 'C++', 'Java'
 
     Args:
         issues (List[List]): a list of lists, each list item contains: coding language name, year, quarter, count
-        Example: [['Python', '2012', '1', '6774'], ['Java', '2012', '1', '4429'], ['C++', '2012', '1', '3421'], ...]
+        Example: [['Python', '2012', '1', '6774'], ['Java', '2012', '1', '4429'], ['C++', '2012', '1', '3421']...]
+        Here ['Python', '2012', '1', '6774'] means 6774 issues are found in Python repos in the first quarter of year 2012
 
         languages (List[Str]): a list of coding language names
 
@@ -42,7 +43,7 @@ def plot_issue_trend_by_language(issues, languages=['Python', 'C', 'C++', 'Java'
         1. create a nested dictionay with following data structure would be helpful:
             {
                 "Python": {
-                    "2012": 78383,
+                    "2012": 78383, # this is the sum of 4 quarters
                     "2013": 176586,
                     ...
                 },
